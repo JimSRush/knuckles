@@ -1,28 +1,36 @@
+from random import randint
 print("Put these on yer knuckles")
 
 adjectives = []
-verbs = []
-nouns = []
-adverbs = []
-
-#adjective first
-#adverb (maybe noun)
-#or verb
 
 #First things first, we need to open up a file and read each one into a list
-def openFiles():
-    with open ('fourLetterVerbs.txt') as f:
-        verbs = f.read().splitlines()
-    with open ('fourLetterNouns.txt') as f:
-        nouns = f.read().splitlines()
-    with open ('fourLetterAdjective.txt') as f:
-        adjectives = f.read().splitlines()
-    with open ('fourLetterAdverb.txt') as f:
-        adverbs = f.read().splitlines()
+def openFile(filename):
+    with open (filename) as f:
+        return f.read().splitlines()
+
+    # with open ('fourLetterNouns.txt') as f:
+    #     nouns = f.read().splitlines()
+    #
+    # with open ('fourLetterAdjective.txt') as f:
+    #     adjectives = f.read().splitlines()
+    #
+    # with open ('fourLetterAdverb.txt') as f:
+    #     adverbs = f.read().splitlines()
 
     # print(verbs, nouns, adjectives, adverbs)
 def generateTats():
-    
+    #Open files
+    words = openFile('fourLetterNouns.txt') + openFile('fourLetterAdverb.txt') + openFile('fourLetterVerbs.txt') + openFile('fourLetterAdjective.txt')
 
-openFiles()
+    #grab first words
+    print len(words)
+
+    #grab seond words
+
+
+    #print out as one lines
+
+
+    #print a list of the contents of the file
+
 generateTats()
