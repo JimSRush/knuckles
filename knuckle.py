@@ -8,29 +8,20 @@ def openFile(filename):
     with open (filename) as f:
         return f.read().splitlines()
 
-    # with open ('fourLetterNouns.txt') as f:
-    #     nouns = f.read().splitlines()
-    #
-    # with open ('fourLetterAdjective.txt') as f:
-    #     adjectives = f.read().splitlines()
-    #
-    # with open ('fourLetterAdverb.txt') as f:
-    #     adverbs = f.read().splitlines()
-
     # print(verbs, nouns, adjectives, adverbs)
 def generateTats():
     #Open files
     words = openFile('fourLetterNouns.txt') + openFile('fourLetterAdverb.txt') + openFile('fourLetterVerbs.txt') + openFile('fourLetterAdjective.txt')
-
     #grab first words
     print len(words)
+    wordLength = len(words)-1
+    #pick random number
+    random = randint(0, wordLength)
+    rand2 = randint(0, wordLength)
 
-    #grab seond words
-
-
-    #print out as one lines
-
-
-    #print a list of the contents of the file
-
-generateTats()
+    word1 = words[random]
+    word2 = words[rand2]
+    print word1 + " " + word2
+    
+for x in range(0, 100):
+    generateTats()
