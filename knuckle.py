@@ -22,6 +22,3 @@ def generateTats():
     word1 = words[random]
     word2 = words[rand2]
     print word1 + " " + word2
-    
-for x in range(0, 100):
-    generateTats()
